@@ -1,21 +1,21 @@
 {
-    "main": "lib/main",
-    "name": "neko-atom-ui",
-    "theme": "ui",
-    "version": "0.0.0",
-    "description": "Clean and customizable Atom theme with neko stylings",
-    "keywords": [
-        "neko",
-        "ui",
-        "theme",
-        "dark",
-        "black",
-        "customizable",
-        "configurable"
-    ],
-    "repository": "https://github.com/catlinman/neko-atom-ui",
-    "license": "MIT",
-    "engines": {
-        "atom": ">=1.0.0 <2.0.0"
-    }
+  "main": "lib/main",
+  "name": "neko-atom-ui",
+  "theme": "ui",
+  "version": "1.0.0",
+  "description": "Clean and customizable Atom theme with neko stylings",
+  "keywords": [
+    "neko",
+    "ui",
+    "theme",
+    "dark",
+    "black",
+    "customizable",
+    "configurable"
+  ],
+  "repository": "https://github.com/catlinman/neko-atom-ui",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  }
 }
