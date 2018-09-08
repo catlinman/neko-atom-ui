@@ -1,0 +1,75 @@
+@import "ui-mixins";
+@import "ui-variables";
+@import "buttons";
+
+.panel {
+    &.bordered {
+        border-radius: @component-border-radius;
+    }
+}
+
+.tool-panel,
+atom-panel {
+    .text(normal);
+    position: relative;
+}
+
+.tool-bar {
+    margin-left: 4px;
+    border-left: 2px solid @base-theme-color;
+    border-right: 2px solid @base-theme-color;
+    background: @base-background-color !important;
+
+    button.tool-bar-btn {
+        background-color: @base-background-color;
+        color: @text-color;
+
+        &:hover {
+            color: @theme-color;
+        }
+    }
+}
+
+.tool-panel {
+    .find-and-replace,
+    .project-find {
+        background: lighten(@app-background-color, 2.5%);
+
+        .btn {
+            border: 1px solid @inset-panel-border-color;
+        }
+    }
+
+    .status-bar {
+        background: @app-secondary-color;
+        font-size: @font-size;
+
+        a:hover, .inline-block:hover {
+            color: @theme-color;
+            text-decoration: none;
+        }
+    }
+}
+
+.inset-panel {
+    position: relative;
+    background-color: @inset-panel-background-color;
+    border: 1px solid @inset-panel-border-color;
+}
+
+.panel-heading {
+    .text(normal);
+    border-bottom: 1px solid @panel-heading-border-color;
+    border-top: 1px solid fadein(@background-color-highlight, 1%);
+    background-color: lighten(@inset-panel-background-color, 1%);
+
+    .btn {
+        padding-left: 8px;
+        padding-right: 8px;
+        @bg: lighten(@button-background-color, 10%);
+        @hover: lighten(@button-background-color-hover, 10%);
+        @selected: lighten(@button-background-color-selected, 10%);
+        @text: lighten(@text-color, 10%);
+        .btn-background(@bg, @hover, @selected, @text);
+    }
+}

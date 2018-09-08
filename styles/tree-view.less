@@ -1,0 +1,97 @@
+@import "ui-variables";
+
+.tree-view {
+    padding: 0;
+    font-size: @font-size;
+    background: @tree-view-background-color;
+    border-right: 2px solid @base-theme-color;
+
+    .entry:before {
+        background: transparent;
+    }
+    .entry.selected:before {
+        height: 0px;
+    }
+
+    .list-item > .name, .list-nested-item > .header {
+        transition: margin-left .5s ease-in-out, color .5s ease-in-out, font-weight .5s ease-in-out;
+    }
+
+    .list-item, .list-nested-item, .directory {
+        transition: margin-left .5s ease-in-out, background-color .5s ease-in-out;
+    }
+
+    .directory.selected:not(.collapsed), .list-item.selected > .name {
+        color: @theme-color !important;
+        font-weight: 500 !important;
+        margin-left: 8px;
+    }
+
+    .list-nested-item.selected > .header {
+        color: @theme-color !important;
+        font-weight: 500 !important;
+    }
+
+    .list-item.selected,
+    .list-nested-item.selected {
+        //margin-left: 8px;
+        border-radius: 4px;
+        background-color: @app-secondary-color;
+    }
+
+    .project-root > .header.list-item {
+        position: relative;
+        line-height: @tab-height - @tab-indicator-size;
+        height: @tab-height;
+        border-bottom: @tab-indicator-size solid @base-theme-color;
+        background: @app-background-color;
+
+        &::before {
+            visibility: hidden;
+        }
+    }
+
+    .project-root > .entries.list-tree {
+        margin: 10px 0;
+    }
+
+    .project-root.selected > .header.list-item span {
+        color: @theme-color;
+    }
+
+    .tree-view-root {
+        padding-left: 0px;
+        padding-right: 4px;
+        margin-right: 2px;
+    }
+}
+
+// gutter divider for left or right positioned tree view
+.left .tree-view-scroller {
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 1px;
+        background: @tree-view-background-color;
+    }
+}
+.right .tree-view-scroller {
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 1px;
+        background: @tree-view-background-color;
+    }
+}
+
+.tree-view-resizer {
+    .tree-view-resize-handle {
+        width: 10px;
+    }
+}

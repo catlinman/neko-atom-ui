@@ -1,0 +1,74 @@
+@import "ui-variables";
+
+* {
+    box-sizing: border-box;
+}
+
+atom-workspace {
+    background-color: @app-background-color;
+}
+
+.scrollbars-visible-always {
+    // general
+    /deep/::-webkit-scrollbar {
+        width: 16px;
+        height: 12px;
+    }
+
+    /deep/::-webkit-scrollbar-track {
+        background-color: @scrollbar-background-color;
+    }
+
+    /deep/::-webkit-scrollbar-corner {
+        background: transparent;
+    }
+
+    /deep/::-webkit-scrollbar-thumb {
+        width: 8px;
+        border: 6px solid transparent;
+        background-color: @app-secondary-color;
+        background-clip: content-box;
+
+        &:hover {
+            background-color: @scrollbar-color;
+            background-clip: content-box;
+        }
+    }
+    // left & right panels
+    atom-panel-container.left,
+    atom-panel-container.right {
+        /deep/::-webkit-scrollbar {
+            width: 16px;
+            height: 13px;
+        }
+
+        /deep/::-webkit-scrollbar-track {
+            background-color: @tree-view-background-color;
+        }
+
+        /deep/::-webkit-scrollbar-corner {
+            background: @tree-view-background-color;
+        }
+
+        /deep/::-webkit-scrollbar-thumb {
+            width: 8px;
+            border: 6px solid transparent;
+            background-color: @app-secondary-color;
+            background-clip: content-box;
+
+            &:hover {
+                background-color: @scrollbar-color;
+                background-clip: content-box;
+            }
+        }
+    }
+
+    .atom-dock-toggle-button-inner {
+        background-color: @app-secondary-color;
+    }
+
+    .nuclide-ui-empty-state-message {
+        text-align: center;
+        padding: 24px;
+    }
+}

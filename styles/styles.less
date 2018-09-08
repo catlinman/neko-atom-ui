@@ -1,0 +1,141 @@
+// A shoddy implementation of adding or removing styles based on configuration
+// If this theme grows to support more features, I'll adjust how this works
+@import "include-syntax";
+@import "ui-variables";
+
+atom-text-editor {
+    // Autocomplete & Ternjs, for legibility
+    // https://atom.io/packages/autocomplete-plus
+    // https://github.com/tststs/atom-ternjs
+    atom-overlay {
+        autocomplete-suggestion-list.select-list.popover-list ol.list-group li.selected .character-match,
+        autocomplete-suggestion-list.select-list.popover-list ol.list-group li.selected .word {
+            color: @text-color-overlay;
+        }
+
+        autocomplete-suggestion-list {
+            box-shadow: 0 1px 5px rgba(0,0,0,0.3) !important;
+
+            .suggestion-list-scroller {
+                .selected {
+                    i {
+                        color: @text-color-overlay;
+                    }
+
+                    .icon-container > i {
+                        background: rgba(255, 255, 255, 0.1) !important;
+                    }
+                }
+            }
+
+            .suggestion-description {
+                background: transparent !important;
+                color: darken(@text-color, 10%) !important;
+                border-top: 1px solid darken(@base-background-color, 4%);
+                box-shadow: inset 0 1px darken(@base-theme-color, 2%);
+
+                .suggestion-description-content,
+                .suggestion-description-more-link {
+                    font-size: @font-size !important;
+                }
+            }
+        }
+    }
+    // Minimap styling
+    // https://atom.io/packages/minimap
+    &.editor {
+        atom-text-editor-minimap {
+            /deep/ .minimap-visible-area {
+                background: transparent;
+
+                &:after {
+                    background: fadeout(@theme-color-subtle, 50%) !important;
+                }
+            }
+        }
+    }
+}
+// Settings specific styling
+
+.settings-view {
+    .config-menu {
+        min-width: 175px;
+        max-width: 175px;
+        border-right: none;
+        background: transparent;
+
+        .button-area {
+            margin: 0;
+
+            .btn {
+                text-align: left;
+                height: 37px;
+                border-radius: 0;
+                padding: 10px 15px;
+                line-height: normal;
+                background: transparent;
+                transition: none;
+
+                &::before {
+                    width: 16px;
+                }
+
+                &:hover {
+                    background-color: rgba(255, 255, 255, 0.07);
+                }
+
+                &:active {
+                    box-shadow: none;
+                    color: @text-color-overlay;
+                }
+            }
+        }
+
+        ul.panels-menu {
+            li.active a {
+                color: @text-color-overlay;
+            }
+        }
+    }
+
+    .section-heading,
+    .sub-section-heading,
+    h1 {
+        font-weight: 400 !important;
+        font-size: 15px !important;
+    }
+
+    .btn.btn-info,
+    .btn.btn-primary {
+        color: @text-color-overlay;
+        background: @theme-color-bg;
+
+        &:hover {
+            background: lighten(@theme-color-bg, 3%) !important;
+        }
+    }
+
+    .alert-info {
+        background: @theme-color-bg;
+        color: @text-color-highlight;
+        border: none;
+    }
+
+    .package-card,
+    .thumbnail {
+        background: @background-color-highlight;
+        box-shadow: 0 1px 3px @app-background-color;
+    }
+
+    .checkbox {
+        input {
+            &:active {
+                background: @theme-color-bg !important;
+            }
+
+            &:checked {
+                background: @theme-color !important;
+            }
+        }
+    }
+}

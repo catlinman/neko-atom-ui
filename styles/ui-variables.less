@@ -1,0 +1,93 @@
+@import "include-color";
+@import "include-fontsize";
+
+// Accents
+
+@theme-color-subtle: darken(desaturate(@theme-color, 100%), 40%);
+@theme-color-bg: darken(desaturate(@theme-color, 10%), 10%);
+
+// Colors
+
+@text-color: #aaa;
+@text-color-subtle: #6b6b6b;
+@text-color-highlight: #eee;
+@text-color-selected: @text-color-highlight;
+@text-color-overlay: @theme-overlay;
+
+@text-color-info: @theme-color;
+@text-color-success: #2BDA77;
+@text-color-warning: #ffc142;
+@text-color-error: #c92525;
+
+@text-color-ignored: @text-color-subtle;
+@text-color-added: @text-color-success;
+@text-color-renamed: @text-color-info;
+@text-color-modified: @text-color-warning;
+@text-color-removed: @text-color-error;
+
+@background-color-info: #4b82b2;
+@background-color-success: @text-color-success;
+@background-color-warning: @text-color-warning;
+@background-color-error: @text-color-error;
+@background-color-highlight: fade(@text-color-highlight, 5%);
+@background-color-selected: @theme-color-bg;
+
+@app-background-color: #0c0c0c;
+@app-secondary-color: #101010;
+
+@base-background-color: @app-background-color;
+@base-border-color: transparent;
+@base-theme-color: lighten(@base-background-color, 3%);
+
+@input-background-color: @app-secondary-color;
+@input-border-color: lighten(@input-background-color, 2%);
+@input-theme-color: rgba(255,255,255,0.05);
+
+@inset-panel-background-color: @app-background-color;
+@inset-panel-border-color: @input-border-color;
+
+@panel-heading-background-color: @base-background-color;
+@panel-heading-border-color: @input-border-color;
+
+@tree-view-background-color: @base-background-color;
+
+@tool-panel-background-color: @app-background-color;
+@tool-panel-border-color: @input-border-color;
+
+@button-background-color: @input-background-color;
+@button-background-color-hover: lighten(@button-background-color, 1%);
+@button-background-color-selected: @theme-color-bg;
+@button-border-color: @input-border-color;
+
+@tab-bar-background-color: @app-background-color;
+@tab-background-color: @base-background-color;
+@tab-background-color-active: @base-theme-color;
+@tab-height: 48px;
+@tab-indicator-size: 2px;
+
+@scrollbar-background-color: transparent;
+@scrollbar-color: @theme-color;
+
+@ui-site-color-1: @background-color-success; // green
+@ui-site-color-2: @background-color-info; // blue
+@ui-site-color-3: @background-color-warning; // orange
+@ui-site-color-4: #ae48e2; // purple
+@ui-site-color-5: #f7c85b; // yellow
+
+// Sizes
+
+
+@input-font-size: 14px;
+@dropdown-font-size: 14px;
+
+@disclosure-arrow-size: @font-size;
+
+@component-padding: 10px;
+@component-icon-padding: 5px;
+@component-icon-size: 16px;
+@component-line-height: (@font-size * 2) + 2;
+@component-border-radius: 2px;
+
+// Other
+
+@font-family: 'Lucida Grande', 'Segoe UI', Ubuntu, Cantarell, sans-serif;
