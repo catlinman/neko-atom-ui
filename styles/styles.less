@@ -9,7 +9,8 @@ atom-text-editor {
     // https://github.com/tststs/atom-ternjs
     atom-overlay {
         autocomplete-suggestion-list.select-list.popover-list ol.list-group li.selected .character-match,
-        autocomplete-suggestion-list.select-list.popover-list ol.list-group li.selected .word {
+        autocomplete-suggestion-list.select-list.popover-list ol.list-group li.selected .word,
+        autocomplete-suggestion-list.select-list.popover-list ol.list-group li.selected .right-label {
             color: @text-color-overlay;
         }
 
@@ -40,7 +41,12 @@ atom-text-editor {
                 }
             }
         }
+
+        .atom-ternjs-type {
+            background: @app-secondary-color !important;
+        }
     }
+
     // Minimap styling
     // https://atom.io/packages/minimap
     &.editor {
@@ -56,6 +62,16 @@ atom-text-editor {
     }
 }
 // Settings specific styling
+
+.outline-view-trees {
+    .list-item.outline-view-item.selected {
+        color: @text-color-overlay;
+
+        span {
+            color: @text-color-overlay
+        }
+    }
+}
 
 .settings-view {
     .config-menu {
@@ -117,7 +133,7 @@ atom-text-editor {
 
     .alert-info {
         background: @theme-color-bg;
-        color: @text-color-highlight;
+        color: @text-color-overlay;
         border: none;
     }
 
