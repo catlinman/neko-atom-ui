@@ -2,7 +2,7 @@
   "main": "lib/main",
   "name": "neko-atom-ui",
   "theme": "ui",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Clean and customizable Atom theme with neko stylings",
   "keywords": [
     "neko",
