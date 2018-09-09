@@ -4,6 +4,8 @@
 Contrasted dark, focused and clean theme with a pinch of color for easy visual
 grepping.
 
+![](https://github.com/catlinman/neko-atom-ui/blob/master/preview.png)
+
 ## Customization ##
 
 The theme allows for editing of the primary color as well as the overlay used on
