@@ -1,21 +1,64 @@
 {
-  "main": "lib/main",
-  "name": "neko-atom-ui",
-  "theme": "ui",
-  "version": "1.1.6",
-  "description": "Clean and customizable Atom theme with neko stylings",
-  "keywords": [
-    "neko",
-    "ui",
-    "theme",
-    "dark",
-    "black",
-    "customizable",
-    "configurable"
-  ],
-  "repository": "https://github.com/catlinman/neko-atom-ui",
-  "license": "MIT",
-  "engines": {
-    "atom": ">=1.0.0 <2.0.0"
-  }
+    "main": "lib/main",
+    "name": "neko-atom-ui",
+    "theme": "ui",
+    "version": "1.1.6",
+    "description": "Clean and customizable Atom theme with neko stylings",
+    "keywords": [
+        "neko",
+        "ui",
+        "theme",
+        "dark",
+        "black",
+        "customizable",
+        "configurable"
+    ],
+    "repository": "https://github.com/catlinman/neko-atom-ui",
+    "license": "MIT",
+    "configSchema": {
+        "colorTheme": {
+            "description": "Set the main color used throughout the theme",
+            "type": "color",
+            "default": "#f3aa15"
+        },
+        "colorThemeHex": {
+            "description": "Set the main color color by hex value (Use #rrggbb)",
+            "type": "string",
+            "default": "#f3aa15"
+        },
+        "colorBackground": {
+            "description": "Set the primary background color",
+            "type": "color",
+            "default": "#0c0c0c"
+        },
+        "colorBackgroundHex": {
+            "description": "Set the primary background color color by hex value (Use #rrggbb)",
+            "type": "string",
+            "default": "#0c0c0c"
+        },
+        "overlayColor": {
+            "description": "Set the contrasting color to your custom color",
+            "type": "string",
+            "default": "Black",
+            "enum": [
+                "Black",
+                "White"
+            ]
+        },
+        "fontSize": {
+            "description": "Set the global font size for this theme.",
+            "type": "integer",
+            "default": 12,
+            "minimum": 8,
+            "maximum": 24
+        },
+        "useSyntax": {
+            "description": "Override the gutter, background, and selection colours",
+            "type": "boolean",
+            "default": "true"
+        }
+    },
+    "engines": {
+        "atom": ">=1.0.0 <2.0.0"
+    }
 }

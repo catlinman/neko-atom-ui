@@ -1,21 +1,25 @@
 @import "include-color";
 @import "include-fontsize";
 
-// Accents
+// Additional computed theme colors.
+@theme-color-subtle: darken(@theme-color, 40%);
+@theme-selected-color: darken(desaturate(@theme-color, 10%), 10%);
+@theme-focus-color: lighten(@app-background-color, 3%);
 
-@theme-color-subtle: darken(desaturate(@theme-color, 75%), 40%);
-@theme-color-bg: darken(desaturate(@theme-color, 10%), 10%);
+// Predefined color variables.
+@app-background-color: @theme-background;
 
-// Colors
+@base-background-color: @app-background-color;
+@base-border-color: transparent;
 
 @text-color: #aaa;
-@text-color-subtle: #6b6b6b;
-@text-color-highlight: #eee;
+@text-color-subtle: darken(@text-color, 25%);
+@text-color-highlight: lighten(@text-color, 25%);
 @text-color-selected: @text-color-highlight;
 @text-color-overlay: @theme-overlay;
 
 @text-color-info: @theme-color;
-@text-color-success: #2BDA77;
+@text-color-success: #2bda77;
 @text-color-warning: #ffc142;
 @text-color-error: #c92525;
 
@@ -30,18 +34,11 @@
 @background-color-warning: @text-color-warning;
 @background-color-error: @text-color-error;
 @background-color-highlight: fade(@text-color-highlight, 5%);
-@background-color-selected: @theme-color-bg;
+@background-color-selected: @theme-selected-color;
 
-@app-background-color: #0c0c0c;
-@app-secondary-color: #101010;
-
-@base-background-color: @app-background-color;
-@base-border-color: transparent;
-@base-theme-color: lighten(@base-background-color, 3%);
-
-@input-background-color: @app-secondary-color;
+@input-background-color: @theme-focus-color;
 @input-border-color: lighten(@input-background-color, 2%);
-@input-theme-color: rgba(255,255,255,0.05);
+@input-theme-color: rgba(255,255,255,0.5);
 
 @inset-panel-background-color: @app-background-color;
 @inset-panel-border-color: @input-border-color;
@@ -59,27 +56,26 @@
 
 @button-background-color: @input-background-color;
 @button-background-color-hover: lighten(@button-background-color, 1%);
-@button-background-color-selected: @theme-color-bg;
+@button-background-color-selected: @theme-selected-color;
 @button-border-color: @input-border-color;
 
 @tab-bar-background-color: @app-background-color;
 @tab-background-color: @base-background-color;
-@tab-background-color-active: @base-theme-color;
+@tab-background-color-active: @theme-focus-color;
 @tab-height: 48px;
 @tab-indicator-size: 2px;
 
 @scrollbar-background-color: transparent;
 @scrollbar-color: @theme-color;
 
-@ui-site-color-1: @background-color-success; // green
-@ui-site-color-2: @background-color-info; // blue
-@ui-site-color-3: @background-color-warning; // orange
-@ui-site-color-4: #ae48e2; // purple
-@ui-site-color-5: #f7c85b; // yellow
+@ui-site-color-1: @background-color-success;
+@ui-site-color-2: @background-color-info;
+@ui-site-color-3: @background-color-warning;
+@ui-site-color-4: #ae48e2;
+@ui-site-color-5: #f7c85b;
 
-// Sizes
-
-
+// Font settings and sizes.
+@font-family: 'Lucida Grande', 'Segoe UI', Ubuntu, Cantarell, sans-serif;
 @input-font-size: 14px;
 @dropdown-font-size: 14px;
 
@@ -90,7 +86,3 @@
 @component-icon-size: 16px;
 @component-line-height: (@font-size * 2) + 2;
 @component-border-radius: 2px;
-
-// Other
-
-@font-family: 'Lucida Grande', 'Segoe UI', Ubuntu, Cantarell, sans-serif;
