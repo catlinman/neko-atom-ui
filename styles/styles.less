@@ -55,7 +55,7 @@ atom-text-editor {
                 background: transparent;
 
                 &:after {
-                    background: fadeout(@theme-color-subtle, 50%) !important;
+                    background: fadeout(desaturate(darken(@theme-selected-color, 20%), 60%), 80%) !important;
                 }
             }
         }
@@ -157,7 +157,7 @@ atom-text-editor {
     .checkbox {
         input {
             &:active {
-                background: @theme-selected-color !important;
+                background: @theme-color !important;
             }
 
             &:checked {

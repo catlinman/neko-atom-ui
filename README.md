@@ -22,6 +22,9 @@ If you are looking for my workspace configuration as seen in the image you can
 head over to the Atom section of
 [neko-config](https://github.com/catlinman/neko-config/tree/master/atom).
 
+The corresponding syntax theme used in the preview of this theme can be found at
+[Neko Atom Syntax](https://atom.io/packages/neko-atom-syntax).
+
 ## License ##
 
 This theme is a partially based on the

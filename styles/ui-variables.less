@@ -2,8 +2,7 @@
 @import "include-fontsize";
 
 // Additional computed theme colors.
-@theme-color-subtle: darken(@theme-color, 40%);
-@theme-selected-color: darken(desaturate(@theme-color, 10%), 10%);
+@theme-selected-color: darken(@theme-color, 0%);
 @theme-focus-color: lighten(@app-background-color, 3%);
 
 // Predefined color variables.
@@ -15,7 +14,7 @@
 @text-color: #aaa;
 @text-color-subtle: darken(@text-color, 25%);
 @text-color-highlight: lighten(@text-color, 25%);
-@text-color-selected: @text-color-highlight;
+@text-color-selected: @theme-overlay;
 @text-color-overlay: @theme-overlay;
 
 @text-color-info: @theme-color;

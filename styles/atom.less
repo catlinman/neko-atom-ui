@@ -63,12 +63,20 @@ atom-workspace {
         }
     }
 
-    .atom-dock-toggle-button-inner {
-        background-color: @theme-focus-color;
-    }
-
     .nuclide-ui-empty-state-message {
         text-align: center;
         padding: 24px;
     }
+}
+
+.atom-dock-toggle-button .atom-dock-toggle-button-inner {
+    background-color: @theme-focus-color;
+}
+
+.atom-dock-toggle-button.left {
+    left: 98%;
+}
+
+.atom-dock-toggle-button.bottom {
+    bottom: 96%;
 }
