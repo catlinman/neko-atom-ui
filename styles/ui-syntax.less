@@ -3,6 +3,10 @@
 atom-text-editor {
     background: lighten(@theme-background, 1%);
 
+    /deep/ .wrap-guide {
+        background: fade(lighten(@theme-background, 15%), 25%)
+    }
+
     /deep/ .indent-guide {
         color: rgba(255,255,255,0.035) !important;
     }
@@ -13,18 +17,16 @@ atom-text-editor {
 
     /deep/ .gutter {
         background-color: @theme-background;
-        border: none;
 
-        .line-numbers {
-            .line-number {
-                background: @theme-focus-color !important;
-                color: @theme-color !important;
-            }
-            .cursor-line-no-selection,
-            .cursor-line {
-                transition: color .3s !important;
-                color: @theme-color !important;
-            }
+        .line-number {
+            background: @theme-background !important;
+            color: @text-color-subtle !important;
+        }
+
+        .cursor-line-no-selection,
+        .cursor-line {
+            transition: color .3s !important;
+            color: @theme-color !important;
         }
     }
 }
