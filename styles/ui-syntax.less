@@ -1,7 +1,7 @@
 // Editor tweaks (works in conjunction with syntax themes)
 // This only tweaks the background, gutter, and selection colours
 atom-text-editor {
-    background: lighten(@theme-background, 1%);
+    background: darken(@theme-background, 2%);
 
     /deep/ .wrap-guide {
         background: fade(lighten(@theme-background, 15%), 25%)
@@ -12,14 +12,15 @@ atom-text-editor {
     }
 
     /deep/ .selection .region {
-        background: #2e2e2e !important;
+        background: @theme-focus-color !important;
+        border-radius: 4px;
     }
 
     /deep/ .gutter {
-        background-color: @theme-background;
+        background-color: darken(@theme-background, 1%);
 
         .line-number {
-            background: @theme-background !important;
+            background: darken(@theme-background, 1%) !important;
             color: @text-color-subtle !important;
         }
 

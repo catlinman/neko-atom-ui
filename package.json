@@ -2,7 +2,7 @@
   "main": "lib/main",
   "name": "neko-atom-ui",
   "theme": "ui",
-  "version": "1.3.1",
+  "version": "1.4.0",
   "description": "Clean and customizable Atom theme with neko stylings",
   "keywords": [
     "neko",
@@ -19,12 +19,12 @@
     "colorTheme": {
       "description": "Set the main color used throughout the theme",
       "type": "color",
-      "default": "#f3aa15"
+      "default": "#ffbf3b"
     },
     "colorThemeHex": {
       "description": "Set the main color color by hex value (Use #rrggbb)",
       "type": "string",
-      "default": "#f3aa15"
+      "default": "#ffbf3b"
     },
     "colorBackground": {
       "description": "Set the primary background color",

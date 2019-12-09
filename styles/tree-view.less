@@ -14,7 +14,10 @@
     }
 
     .list-item > .name, .list-nested-item > .header {
-        transition: margin-left .5s ease-in-out, color .5s ease-in-out, font-weight .5s ease-in-out;
+        transition: margin-left .5s ease-in-out, color .5s ease-in-out, font-weight .5s ease-in-out, color .1s ease-in-out;
+        &:hover {
+            color: @theme-hover-color;
+        }
     }
 
     .list-item, .list-nested-item, .directory {
@@ -24,12 +27,18 @@
     .directory.selected:not(.collapsed), .list-item.selected > .name {
         color: @theme-color !important;
         font-weight: 500 !important;
-        margin-left: 8px;
+        margin-left: 6px;
+        padding-left: 8px;
+        border-left: solid 2px @theme-selected-color;
     }
 
     .list-nested-item.selected > .header {
         color: @theme-color !important;
         font-weight: 500 !important;
+
+        &:hover {
+            color: @theme-hover-color !important;
+        }
     }
 
     .list-item.selected,

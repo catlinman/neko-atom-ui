@@ -1,6 +1,12 @@
 
 # Neko Atom UI Changelog #
 
+## 1.4.0 ##
+
+- Improve color separation between editor and elements.
+- Add hover colors for tabs and tree elements.
+- Modify default highlight color.
+
 ## 1.3.0 ##
 
 - Add link to Neko Atom Syntax theme.
