@@ -1,6 +1,13 @@
 
 # Neko Atom UI Changelog #
 
+## 1.6.0 ##
+
+- Improve tree view highlighting
+- Set default editor background color
+- Set color for welcome window to not match sidebar
+- Make side widgets' color correspond to their pane
+
 ## 1.4.0 ##
 
 - Improve color separation between editor and elements.

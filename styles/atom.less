@@ -5,7 +5,15 @@
 }
 
 atom-workspace {
-    background-color: @app-background-color;
+    background-color: darken(@theme-background, 2%);
+}
+
+background-tips {
+    background-color: darken(@theme-background, 2%);
+}
+
+.atom-dock-resize-handle {
+    width: 2px !important;
 }
 
 .scrollbars-visible-always {
@@ -70,7 +78,7 @@ atom-workspace {
 }
 
 .atom-dock-toggle-button .atom-dock-toggle-button-inner {
-    background-color: @theme-focus-color;
+    background-color: @theme-background;
 }
 
 .atom-dock-toggle-button.left {

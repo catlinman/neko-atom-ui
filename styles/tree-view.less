@@ -4,7 +4,6 @@
     padding: 0;
     font-size: @font-size;
     background: @tree-view-background-color;
-    border-right: 2px solid @theme-focus-color;
 
     .entry:before {
         background: transparent;
@@ -27,8 +26,12 @@
     .directory.selected:not(.collapsed), .list-item.selected > .name {
         color: @theme-color !important;
         font-weight: 500 !important;
+    }
+
+    .list-item.selected > .name {
         margin-left: 6px;
         padding-left: 8px;
+        border-radius: 0px;
         border-left: solid 2px @theme-selected-color;
     }
 
@@ -43,7 +46,6 @@
 
     .list-item.selected,
     .list-nested-item.selected {
-        //margin-left: 8px;
         border-radius: 4px;
         background-color: @theme-focus-color;
     }
@@ -61,7 +63,7 @@
     }
 
     .project-root > .entries.list-tree {
-        margin: 10px 0;
+        margin: 8px 0;
     }
 
     .project-root.selected > .header.list-item span {
@@ -69,9 +71,7 @@
     }
 
     .tree-view-root {
-        padding-left: 0px;
         padding-right: 4px;
-        margin-right: 2px;
     }
 }
 
